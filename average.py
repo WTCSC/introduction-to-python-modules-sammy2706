@@ -10,3 +10,16 @@ format:
 
 "Average words per line: [average]"
 """
+# Open sample.txt as file
+with open("sample.txt" , "r") as file:
+    # Sets total number of lines and words to 0
+    total_lines = 0
+    total_words = 0
+    for line in file.readlines():
+        # For every line in text it adds to the total
+        total_lines += 1
+        # Counts the number of words in the line and adds it to the total number of words
+        total_words += len(line.split(" "))
+# Takes the total word and divides it by the total line to find average and rounds it down
+print(f"Average words per line: {total_words // total_lines}")
+
